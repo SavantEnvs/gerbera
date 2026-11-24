@@ -1,0 +1,9 @@
+project: savantenvs/gerbera
+target: fuzz_upnp_clients
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_upnp_clients/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_upnp_clients
+    libfuzzer: true
+    timeout: 10

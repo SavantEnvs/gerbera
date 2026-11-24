@@ -1,0 +1,1 @@
+@id = "4" and @refID exists false and upnp:originalTrackNumber > "3" and last_updated > "@last7"

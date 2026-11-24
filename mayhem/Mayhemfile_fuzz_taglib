@@ -1,0 +1,9 @@
+project: savantenvs/gerbera
+target: fuzz_taglib
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_taglib/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_taglib
+    libfuzzer: true
+    timeout: 10

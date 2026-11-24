@@ -1,0 +1,9 @@
+project: savantenvs/gerbera
+target: fuzz_string_converter
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_string_converter/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_string_converter
+    libfuzzer: true
+    timeout: 10

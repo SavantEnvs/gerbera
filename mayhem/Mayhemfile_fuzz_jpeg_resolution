@@ -1,0 +1,9 @@
+project: savantenvs/gerbera
+target: fuzz_jpeg_resolution
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_jpeg_resolution/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_jpeg_resolution
+    libfuzzer: true
+    timeout: 10

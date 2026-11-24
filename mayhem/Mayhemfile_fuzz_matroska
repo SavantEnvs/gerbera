@@ -1,0 +1,9 @@
+project: savantenvs/gerbera
+target: fuzz_matroska
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_matroska/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_matroska
+    libfuzzer: true
+    timeout: 10

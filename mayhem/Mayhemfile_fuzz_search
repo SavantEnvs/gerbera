@@ -1,0 +1,9 @@
+project: savantenvs/gerbera
+target: fuzz_search
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_search/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_search
+    libfuzzer: true
+    timeout: 30
